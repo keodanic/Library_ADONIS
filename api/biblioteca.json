@@ -1,0 +1,399 @@
+{
+  "name": "biblioteca",
+  "version": "1",
+  "items": [
+    {
+      "type": "folder",
+      "name": "emprestimo",
+      "items": [
+        {
+          "type": "http",
+          "name": "index",
+          "seq": 1,
+          "request": {
+            "url": "http://localhost:3333/emprestimo",
+            "method": "GET",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "auth": {
+              "mode": "none"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "store",
+          "seq": 2,
+          "request": {
+            "url": "http://localhost:3333/emprestimo",
+            "method": "POST",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "json",
+              "json": "{\n      \"user_id\":1,\n      \"livro_id\":1\n}",
+              "formUrlEncoded": [],
+              "multipartForm": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "auth": {
+              "mode": "bearer",
+              "bearer": {
+                "token": "MQ.w8SdqhqioaGyGdCihuEaE6rrWzA251FeYnyQ9TGvehk9hzKurp6gVRmnQ4Bu"
+              }
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "update",
+          "seq": 3,
+          "request": {
+            "url": "",
+            "method": "PUT",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "auth": {
+              "mode": "none"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "show",
+          "seq": 4,
+          "request": {
+            "url": "",
+            "method": "GET",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "auth": {
+              "mode": "none"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "name": "livro",
+      "items": [
+        {
+          "type": "http",
+          "name": "delete",
+          "seq": 5,
+          "request": {
+            "url": "http://localhost:3333/livro/3",
+            "method": "DELETE",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "json": "{\n  \"name\": \"Abilio Coelho\",\n  \"email\": \"abiliocoelho@gmail.com\",\n  \"password\": \"secret\"\n}",
+              "formUrlEncoded": [],
+              "multipartForm": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "auth": {
+              "mode": "none"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "index",
+          "seq": 2,
+          "request": {
+            "url": "http://localhost:3333/livro",
+            "method": "GET",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "json": "{\n  \"name\": \"Abilio Coelho\",\n  \"email\": \"abiliocoelho@gmail.com\",\n  \"password\": \"secret\"\n}",
+              "formUrlEncoded": [],
+              "multipartForm": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "auth": {
+              "mode": "none"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "show",
+          "seq": 3,
+          "request": {
+            "url": "http://localhost:3333/livro/1",
+            "method": "GET",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "json": "{\n  \"name\": \"Abilio Coelho\",\n  \"email\": \"abiliocoelho@gmail.com\",\n  \"password\": \"secret\"\n}",
+              "formUrlEncoded": [],
+              "multipartForm": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "auth": {
+              "mode": "none"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "store",
+          "seq": 1,
+          "request": {
+            "url": "http://localhost:3333/livro",
+            "method": "POST",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "json",
+              "json": "{\n  \n  \"nome_livro\":\"livro hmmmmma\",\n      \"autor_livro\": \"el tonya\",\n      \"ano_publicacao\":2012\n}",
+              "formUrlEncoded": [],
+              "multipartForm": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "auth": {
+              "mode": "none"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "name": "session",
+      "items": [
+        {
+          "type": "http",
+          "name": "Login",
+          "seq": 1,
+          "request": {
+            "url": "http://localhost:3333/session",
+            "method": "POST",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "json",
+              "json": "{\n  \"email\": \"kasca@gmail.com\",\n  \"password\": \"101\"\n}",
+              "formUrlEncoded": [],
+              "multipartForm": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "auth": {
+              "mode": "none"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "Logout",
+          "seq": 2,
+          "request": {
+            "url": "http://localhost:3333/session",
+            "method": "DELETE",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "auth": {
+              "mode": "none"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "name": "user",
+      "items": [
+        {
+          "type": "http",
+          "name": "delete",
+          "seq": 5,
+          "request": {
+            "url": "http://localhost:3333/user/1",
+            "method": "DELETE",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "json": "{\n  \"name\": \"Abilio Coelho\",\n  \"email\": \"abiliocoelho@gmail.com\",\n  \"password\": \"secret\"\n}",
+              "formUrlEncoded": [],
+              "multipartForm": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "auth": {
+              "mode": "none"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "index",
+          "seq": 2,
+          "request": {
+            "url": "http://localhost:3333/user",
+            "method": "GET",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "json": "{\n  \"name\": \"Abilio Coelho\",\n  \"email\": \"abiliocoelho@gmail.com\",\n  \"password\": \"secret\"\n}",
+              "formUrlEncoded": [],
+              "multipartForm": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "auth": {
+              "mode": "none"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "show",
+          "seq": 3,
+          "request": {
+            "url": "http://localhost:3333/user/3",
+            "method": "GET",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "json": "{\n  \"name\": \"Abilio Coelho\",\n  \"email\": \"abiliocoelho@gmail.com\",\n  \"password\": \"secret\"\n}",
+              "formUrlEncoded": [],
+              "multipartForm": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "auth": {
+              "mode": "none"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "store",
+          "seq": 1,
+          "request": {
+            "url": "http://localhost:3333/user",
+            "method": "POST",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "json",
+              "json": "{\n  \"nome_usuario\": \"caska dybala\",\n  \"cpf_usuario\": \"000.000.000-02\",\n  \"email\": \"kasca@gmail.com\",\n  \"password\": \"101\"\n  \n}",
+              "formUrlEncoded": [],
+              "multipartForm": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "auth": {
+              "mode": "none"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "update",
+          "seq": 4,
+          "request": {
+            "url": "http://localhost:3333/user/1",
+            "method": "PUT",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "json",
+              "json": "{\n  \"name\": \"Abilio Soares Coelho\",\n  \"email\": \"abiliocoelho@gmail.com\",\n  \"password\": \"secret\"\n}",
+              "formUrlEncoded": [],
+              "multipartForm": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "auth": {
+              "mode": "none"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "environments": [],
+  "brunoConfig": {
+    "version": "1",
+    "name": "biblioteca",
+    "type": "collection",
+    "ignore": [
+      "node_modules",
+      ".git"
+    ]
+  }
+}
